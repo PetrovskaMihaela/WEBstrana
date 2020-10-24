@@ -7,15 +7,24 @@
     <link rel="icon" href="logo.jpg" type="image/x-icon"/>
 
     <style type="text/css">
+        h2{
+            font-weight: bold;
+            font-family:Arial, Helvetica, sans-serif;
+            color: darkslategray;
+           
+        }
         h3 { font-weight: bolder;
-            color:darkslategrey;
+            color:lavender;
+            text-shadow: rgb(0, 0, 0);
             font-family: Arial, Helvetica, sans-serif;
             font-optical-sizing: auto;}
         h5 {font-weight: bold;
             font-family: Arial, Helvetica, sans-serif;
             font-style: italic;
-            color:darkslategrey;}
+            color:lavender;
+            text-shadow: rgb(0, 0, 0);}
         p {font-size: large;
+            color: darkslategray;
             text-shadow: dimgray;}
         .topnav {
             background-color:rgba(158, 113, 202, 0.692);
@@ -26,6 +35,7 @@
             color:darkslategray;
             text-align: center;
             padding: 15px 20px;
+            text-shadow: black;
             text-decoration: none;
             font-size: 20px;
         }
@@ -33,12 +43,18 @@
             background-color: #ddd;
             color:rgba(158, 113, 202, 0.692);
         }
-        header {background-image: url("background1.jpg") ;
-        
-            background-color:lavender;
+        header { 
+            background-image: url("background3.jpg");
+            background-color:lavander;
             background-repeat:repeat;
            
-  }
+        }
+        footer{
+            background-color:rgba(158, 113, 202, 0.692) ;
+        }
+        image{
+            padding-top: 5%;padding-bottom: 5%;
+        }
     </style>
     
    
@@ -51,6 +67,7 @@
         
         <h3> Welcome to Mihaela's web page! </h3>
         <h5> We hope you'll enjoy the content. </h5>
+        <p> </p>
         <div class="topnav">
             <a class="active" href="#home">Home</a>
             <a href="#gallery">My Gallery</a>
@@ -74,6 +91,51 @@
                 </tr>
             </tbody>
         </table>-->
-    </header><!--<img src="profilna.jpg" height="200dp"/>-->
-</body>
+    </header>
+
+    <article><h2>Home Page</h2>
+     <figure><img src="profilna.jpg" height="200dp"/><p></p></figure>
+        <section>
+            <p></p>
+        </section>
+    </article>
+
+    <article id="gallery"><h2>My Gallery</h2> 
+           <section>
+               <p></p>
+           </section>
+       </article>
+
+       <article id="favthings"><h2>My Favourite Things</h2>
+        <section>
+            <p></p>
+        </section>
+    </article>
+    
+    
+    <article id="blog"><h2>My Blog</h2>
+        <section>
+            <p></p>
+        </section>
+    </article>
+
+    <article id="forguests"><h2>For New Guests</h2>
+        <section>
+            <p></p>
+        </section>
+    </article>
+
+    <article id="contact"><h2>How To Contact Me</h2>
+        <section>
+            <p></p>
+        </section>
+    </article>
+
+    <footer>
+        <!-- logo slikicka, quote of the day, datum, saat, mesto-->
+        <p><img src="logo.jpg" width="40dp" height="40dp"/><em>Mihaela Petrovska</em><br> Date&Time <time></time> </p>
+    </footer>
+
+
+    </body>
 </html>
