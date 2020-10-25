@@ -14,47 +14,90 @@
            
         }
         h3 { font-weight: bolder;
-            color:lavender;
+            color:rgba(230, 230, 250, 0.788);
             text-shadow: rgb(0, 0, 0);
             font-family: Arial, Helvetica, sans-serif;
-            font-optical-sizing: auto;}
+            font-optical-sizing: auto;
+            text-align: right;
+             }
         h5 {font-weight: bold;
             font-family: Arial, Helvetica, sans-serif;
             font-style: italic;
-            color:lavender;
-            text-shadow: rgb(0, 0, 0);}
+            color:rgba(230, 230, 250, 0.836);
+            text-shadow: rgb(0, 0, 0);
+            text-align: right;
+            }
         p {font-size: large;
             color: darkslategray;
             text-shadow: dimgray;}
-        .topnav {
-            background-color:rgba(158, 113, 202, 0.692);
-            overflow: hidden;
-        }
-        .topnav a {
-            float: left;
-            color:darkslategray;
-            text-align: center;
-            padding: 15px 20px;
-            text-shadow: black;
-            text-decoration: none;
-            font-size: 20px;
-        }
-        .topnav a:hover { 
-            background-color: #ddd;
-            color:rgba(158, 113, 202, 0.692);
-        }
+        
         header { 
-            background-image: url("background3.jpg");
+            background-image: url("background1.jpg");
             background-color:lavander;
             background-repeat:repeat;
+            
            
         }
         footer{
             background-color:rgba(158, 113, 202, 0.692) ;
+            text-align: right;
+            
         }
         image{
             padding-top: 5%;padding-bottom: 5%;
         }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow:hidden;
+            background-color:rgba(158, 113, 202, 0.692);
+            color:rgba(215, 215, 230, 0.63)
+        }
+
+        li {
+            float: left;
+        }
+        li a, .dropbutton {
+            display: inline-block;
+            color:rgba(215, 215, 230, 0.705);
+            text-align: center;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-size:20px;
+            text-shadow:white;
+            font-family:sans-serif;
+            
+
+        }
+        li a:hover, .dropdown:hover .dropbutton {
+            background-color:rgba(215, 215, 230, 0.63);
+            color: rgba(157, 113, 202, 0.932);
+        }
+        li.dropdown {
+            display:inline-block;
+        }
+        .dropdown-content{
+            display: none;
+            position: absolute;
+             background-color: #f1f1f1;
+             min-width: 20%;
+             overflow: auto;
+             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+             z-index: 1;
+        }
+        .dropdown-content a {
+            color:rgba(157, 113, 202, 0.801);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {background-color:rgba(215, 215, 230, 0.63)}
+        .dropdown:hover .dropdown-content {display: block; }
+        .dropdown:hover .dropbutton {background-color:rgba(215, 215, 230, 0.705);}
+        
     </style>
     
    
@@ -67,31 +110,31 @@
         
         <h3> Welcome to Mihaela's web page! </h3>
         <h5> We hope you'll enjoy the content. </h5>
-        <p> </p>
-        <div class="topnav">
-            <a class="active" href="#home">Home</a>
-            <a href="#gallery">My Gallery</a>
-            <a href="#favthings">My Favourite Things</a>
-            <a href="#blog">My Blog</a>
-            <a href="#forguests">For New Guests</a>
-            <a href="#contact">How To Contact Me</a>
-            
-        </div>
-        
-       <!-- <table align="center" bgcolor="F3D6A6" border="1" width="100%" >
-       
-            <tbody>
-                <tr>
-                    <td align="center"><p><img src="home2.png" width ="20dp" height="20dp" /> Home</p> </td>
-                    <td align="center"><p><img src="favv.png" width ="20dp" height="20dp" />  Favourites</p></td>
-                    <td align="center"><p><img src="galleryy.png" width ="20dp" height="20dp" />  Gallery</p></td>
-                    <td align="center"><p><img src="blog.png" width ="20dp" height="20dp" />  Blog</p></td>
-                    <td align="center"><p><img src="lens.jpg" width ="20dp" height="20dp" />  For Guests</p</td>
-                    <td align="center"><p><img src="tel.png" width ="20dp" height="20dp" />  Contact</p></td>
-                </tr>
-            </tbody>
-        </table>-->
-    </header>
+        <p><br><br><br>
+        </p>
+      
+        <ul  >
+            <li><a class="active" href="#home"> Home</a></li>
+            <li><a href="#gallery">My Gallery</a></li>
+            <li class="dropdown">
+                <a class="dropbutton" href="#favthings"> My Favourite Things    </a>   
+               
+                <div class="dropdown-content">
+                    <a href="#hoby">Hobies</a>
+                    <a href="#movie">Movies</a>
+                    <a href="#book">Books</a>
+                    <a href="#show">TV Shows</a>
+                    <a href="#artist">Artists</a>
+                </div>
+            </li>
+            <li><a href="#blog">My Blog</a></li>
+            <li><a href="#forguests">For New Guests</a></li>
+            <li><a href="#contact">How To Contact Me</a></li>
+        </ul>
+         
+        </header> 
+    
+   
 
     <article><h2>Home Page</h2>
      <figure><img src="profilna.jpg" height="200dp"/><p></p></figure>
@@ -107,7 +150,19 @@
        </article>
 
        <article id="favthings"><h2>My Favourite Things</h2>
-        <section>
+        <section id="hoby"> <h4>Hobies</h4>
+            <p></p>
+        </section>
+        <section id="movie"><h4>Movies</h4>
+            <p></p>
+        </section>
+        <section id="book"><h4>Books</h4>
+            <p></p>
+        </section>
+        <section id="show"><h4>TV Shows</h4>
+            <p></p>
+        </section>
+        <section id="artist"><h4>Artists</h4>
             <p></p>
         </section>
     </article>
@@ -132,8 +187,7 @@
     </article>
 
     <footer>
-        <!-- logo slikicka, quote of the day, datum, saat, mesto-->
-        <p><img src="logo.jpg" width="40dp" height="40dp"/><em>Mihaela Petrovska</em><br> Date&Time <time></time> </p>
+        <p><br> <img src="logo.jpg" width="45dp" height="40dp" /><br><em>Mihaela Petrovska</em>  <br> <em> October 2020 </em> </p> 
     </footer>
 
 
