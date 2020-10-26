@@ -9,37 +9,45 @@
     <style type="text/css">
         h2{
             font-weight: bold;
-            font-family:Arial, Helvetica, sans-serif;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             color: darkslategray;
+            font-size: 30;
            
         }
         h3 { font-weight: bolder;
-            color:rgba(230, 230, 250, 0.788);
+            color:rgba(213, 213, 247, 0.664);
             text-shadow: rgb(0, 0, 0);
             font-family: Arial, Helvetica, sans-serif;
             font-optical-sizing: auto;
             text-align: right;
+            padding-right: 5%;
+            
              }
         h5 {font-weight: bold;
             font-family: Arial, Helvetica, sans-serif;
             font-style: italic;
-            color:rgba(230, 230, 250, 0.836);
+            color:rgba(213, 213, 247, 0.664);
             text-shadow: rgb(0, 0, 0);
             text-align: right;
+            font-weight: light;
+            padding-right: 6%;
             }
         p {font-size: large;
             color: darkslategray;
-            text-shadow: dimgray;}
+            text-shadow: dimgray;
+            padding-right: 1%;
+            }
         
         header { 
-            background-image: url("background1.jpg");
+            background-image: url("background3.jpg");
             background-color:lavander;
-            background-repeat:repeat;
+            background-repeat:no-repeat;
+            background-size:cover;
             
            
         }
         footer{
-            background-color:rgba(158, 113, 202, 0.692) ;
+            background-color:rgba(73, 98, 122, 0.753) ;
             text-align: right;
             
         }
@@ -52,7 +60,7 @@
             margin: 0;
             padding: 0;
             overflow:hidden;
-            background-color:rgba(158, 113, 202, 0.692);
+            background-color:rgba(73, 98, 122, 0.753);
             color:rgba(215, 215, 230, 0.63)
         }
 
@@ -73,7 +81,7 @@
         }
         li a:hover, .dropdown:hover .dropbutton {
             background-color:rgba(215, 215, 230, 0.63);
-            color: rgba(157, 113, 202, 0.932);
+            color: rgba(73, 98, 122, 0.753);
         }
         li.dropdown {
             display:inline-block;
@@ -88,7 +96,7 @@
              z-index: 1;
         }
         .dropdown-content a {
-            color:rgba(157, 113, 202, 0.801);
+            color:rgba(73, 98, 122, 0.753);
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -97,21 +105,75 @@
         .dropdown-content a:hover {background-color:rgba(215, 215, 230, 0.63)}
         .dropdown:hover .dropdown-content {display: block; }
         .dropdown:hover .dropbutton {background-color:rgba(215, 215, 230, 0.705);}
+       
+        /* css for the form*/
+        body, html {
+            height: 100%;
+        }
+        * {
+            box-sizing:border-box;
+        }
+        .forma {
+            background-image: url("formimage.jpg");
+           /* min-height: 380px;*/
+            background-position:center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .container {
+            position: relative;
+            right: 0;
+            margin: 20px;
+            max-width: 600px;
+            padding: 16px;
+            background-color:rgba(73, 98, 122, 0.774) ;
+            
+        }
+        input[type=text] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+        input[type=text]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+        .btn {
+            background-color:rgba(73, 98, 122, 0.753);
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+        .btn:hover {
+            opacity: 1;
+        }
+
+    
         
+        
+        #contact{
+            position: relative;
+            margin-bottom: 20%;
+        }
     </style>
     
    
 </head>
 
-<body style="background-color:rgba(215, 215, 230, 0.63)">
+<body style="background-color:rgba(215, 215, 230, 0.705)">
     
     
     <header>
-        
-        <h3> Welcome to Mihaela's web page! </h3>
+        <br>
+        <h3> Welcome to Mihaela's web page! </h3><br><br><br>
         <h5> We hope you'll enjoy the content. </h5>
-        <p><br><br><br>
-        </p>
+        
       
         <ul  >
             <li><a class="active" href="#home"> Home</a></li>
@@ -132,24 +194,24 @@
             <li><a href="#contact">How To Contact Me</a></li>
         </ul>
          
-        </header> 
+    </header> 
     
    
 
-    <article><h2>Home Page</h2>
-     <figure><img src="profilna.jpg" height="200dp"/><p></p></figure>
+    <section><h2>Home Page</h2>
+     <figure><img id="me" src="profilna.jpg" height="200dp"/><p></p></figure>
         <section>
-            <p></p>
+            <p> Hello!</p>
         </section>
-    </article>
+    </section>
 
-    <article id="gallery"><h2>My Gallery</h2> 
+    <section id="gallery"><h2>My Gallery</h2> 
            <section>
-               <p></p>
+               <p>Stay tuned for more content!</p>
            </section>
-       </article>
+    </section>
 
-       <article id="favthings"><h2>My Favourite Things</h2>
+    <section id="favthings"><h2>My Favourite Things</h2>
         <section id="hoby"> <h4>Hobies</h4>
             <p></p>
         </section>
@@ -165,26 +227,121 @@
         <section id="artist"><h4>Artists</h4>
             <p></p>
         </section>
-    </article>
+    </section>
     
     
-    <article id="blog"><h2>My Blog</h2>
-        <section>
-            <p></p>
-        </section>
-    </article>
+    
+    <section id="blog"><h2>My Blog</h2>
+        <p>Stay tuned for more content!</p>
+    </section>
+    
 
-    <article id="forguests"><h2>For New Guests</h2>
-        <section>
-            <p></p>
-        </section>
-    </article>
+    
+    <section id="forguests"><h2>For New Guests</h2>
+            <p>Okay... enough about me. Now I want to get to know YOU! Here you can place your information, like your name, your favourite things or any kind of message or sugestion to the world ...and to me. Also feel free to leave your e-mail address to keep up with new updates on the content!  </p>
+            <br>
+            <div class="forma">
+            <form method = "post" class="container" autocomplete="on">
+                <input type = "hidden" name = "recipient" value = "mihaelapetrovska2@gmail.com">
+                <input type = "hidden" name = "subject" value = "Feedback Form">
+                <input type = "hidden" name = "redirect" value = "main.html">
+            
+                <p><label><strong>Please Write Your Name:  </strong>  <input name = "name" type = "text" size = "25" maxlength = "30" placeholder="Name"></label></p>
+                
+                <p><strong> Your Gender:</strong><br>
+        
+                    <label>Female
+                       <input name = "gender" type = "radio"
+                          value = "female" checked></label>
+                    <label>Male
+                       <input name = "gender" type = "radio" 
+                          value = "male"></label> 
+                 </p>
 
-    <article id="contact"><h2>How To Contact Me</h2>
-        <section>
-            <p></p>
-        </section>
-    </article>
+                <p><label for = "txtList"> <strong> Your Age:</strong>
+                    <input type = "text" id = "txtList" placeholder = "Select your age group..." list = "age" />
+                    <datalist id = "age">
+                       <option value = "0-12">
+                       <option value = "13-18">
+                       <option value = "19-25">
+                       <option value = "26-30">
+                       <option value = "30+">    
+                    </datalist>
+                 </label></p>
+                
+
+                 <p><strong>Choose Your Favourite Season: </strong> <br>
+        
+                    <label>Spring
+                       <input name = "season" type = "radio"
+                          value = "spring" checked></label>
+                    <label>Summer
+                       <input name = "season" type = "radio" 
+                          value = "summer"></label> 
+                    <label>Autumn
+                       <input name = "season" type = "radio" 
+                          value = "autumn"></label>
+                    <label>Winter
+                       <input name = "season" type = "radio" 
+                          value = "winter"></label>
+                    
+                 </p>
+                 <p><label><strong>Choose Your Favourite Number:</strong> 
+                       <input type = "number" 
+                          min = "0"
+                          max = "100"
+                          step = "1"
+                          value = "9" />
+                    </label> 
+                 </p>
+                 <p><strong>Choose Your Favourite Color: </strong> <br>
+        
+                    <label>Red
+                       <input name = "color" type = "radio"
+                          value = "red" checked></label>
+                    <label>Blue
+                       <input name = "color" type = "radio" 
+                          value = "blue"></label> 
+                    <label>Green
+                       <input name = "color" type = "radio" 
+                          value = "green"></label>
+                    <label>Yellow
+                       <input name = "color" type = "radio" 
+                          value = "yellow"></label>
+                    <label>Other
+                        <input name = "color" type = "radio" 
+                            value = "othercolor"></label>
+                    
+                 </p>
+
+                <p><Label><strong>Anything Else On Your Mind? </strong>  <input name="text1" type="text"placeholder="What's on your mind" ></Label></p>
+                <p><label><strong>Rate This Page </strong>
+                       0 <input type = "range" 
+                          min = "0"
+                          max = "10"
+                          value = "5" /> 10
+                    </label>
+                 </p>
+                 <p><label><strong>Do You Have Any Suggestions For Improvement?  </strong> <br> <input name = "sugg" type = "text" placeholder="Sugestions"></label></p>
+                 <p><label><strong>Send Us Your E-mail To Receive Updates!  </strong>  <input name = "maill" type = "text" size = "25" maxlength = "30" placeholder="E-mail Address"></label></p>
+              
+                <p><input class="btn" type = "submit" value = "Submit" />
+                    <input class ="btn" type = "reset" value = "Clear" /></p> 
+                <br> 
+            </form></div>
+
+     </section>
+    
+
+    <section id="contact"><h2>How To Contact Me</h2>
+            <p><div >
+                    
+                     <img src="contact1.jpg " width="40%" style="float:right;"/><p style="float: left;">Send me an E-mail <a href = "mailto:mihaela.petrovska2@gmail.com">here.</a><br><a href="https://www.facebook.com/profile.php?id=100001324047198"> Facebook Profile</a>
+                    <br> <a href="https://www.facebook.com/profile.php?id=100001324047198"> Instagram Account   </a></p>
+                </div>
+              </p>
+        
+    </section>
 
     <footer>
         <p><br> <img src="logo.jpg" width="45dp" height="40dp" /><br><em>Mihaela Petrovska</em>  <br> <em> October 2020 </em> </p> 
