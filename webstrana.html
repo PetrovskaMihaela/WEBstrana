@@ -11,50 +11,58 @@
             font-weight: bold;
             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             color: darkslategray;
-            font-size: 30;
-           
+            font-size: 50;
+            padding-top: 4%;
+            padding-left: 2%;   
         }
         h3 { font-weight: bolder;
-            color:rgba(213, 213, 247, 0.664);
+            color:rgba(255, 255, 255, 0.664);
             text-shadow: rgb(0, 0, 0);
             font-family: Arial, Helvetica, sans-serif;
             font-optical-sizing: auto;
             text-align: right;
             padding-right: 5%;
-            
-             }
+            }
+        h4{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: large;
+            font-style: italic;
+            padding-top: 2%;
+            padding-left:2% ;
+        }
         h5 {font-weight: bold;
             font-family: Arial, Helvetica, sans-serif;
             font-style: italic;
-            color:rgba(213, 213, 247, 0.664);
+            color:rgba(255, 255, 255, 0.664);
             text-shadow: rgb(0, 0, 0);
             text-align: right;
             font-weight: light;
             padding-right: 6%;
             }
-        p {font-size: large;
+        p {font-size: larger;
             color: darkslategray;
             text-shadow: dimgray;
             padding-right: 1%;
             }
         
         header { 
-            background-image: url("background3.jpg");
+            background-image: url("background2.jpg");
             background-color:lavander;
             background-repeat:no-repeat;
-            background-size:cover;
-            
-           
+            background-size:cover;   
         }
         footer{
             background-color:rgba(73, 98, 122, 0.753) ;
             text-align: right;
             
         }
-        image{
-            padding-top: 5%;padding-bottom: 5%;
-        }
         
+        /*img {
+             border: 5px solid rgba(194, 191, 191, 0.637);
+             border-style: groove;
+        }*/
+
+        /*css for dropdown menu*/
         ul {
             list-style-type: none;
             margin: 0;
@@ -76,8 +84,6 @@
             font-size:20px;
             text-shadow:white;
             font-family:sans-serif;
-            
-
         }
         li a:hover, .dropdown:hover .dropbutton {
             background-color:rgba(215, 215, 230, 0.63);
@@ -106,6 +112,37 @@
         .dropdown:hover .dropdown-content {display: block; }
         .dropdown:hover .dropbutton {background-color:rgba(215, 215, 230, 0.705);}
        
+       /*css for home page*/
+        #homee{
+           position: relative;
+           
+        }
+        #me{
+           position: relative;
+           float:left;
+           padding-right: 2%;
+           border:none;
+        }
+
+       /*css for favourite things*/
+        #favthings{
+            background-image:url("ftb1.jpg");
+            background-repeat:no-repeat;
+            background-size:cover;
+        }
+        .column{
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+        
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+             
+        }
+
         /* css for the form*/
         body, html {
             height: 100%;
@@ -128,7 +165,6 @@
             max-width: 600px;
             padding: 16px;
             background-color:rgba(73, 98, 122, 0.774) ;
-            
         }
         input[type=text] {
             width: 100%;
@@ -152,11 +188,9 @@
         }
         .btn:hover {
             opacity: 1;
+            color: rgb(100, 27, 27);
         }
-
-    
-        
-        
+        /*css for contact section*/
         #contact{
             position: relative;
             margin-bottom: 20%;
@@ -182,11 +216,11 @@
                 <a class="dropbutton" href="#favthings"> My Favourite Things    </a>   
                
                 <div class="dropdown-content">
-                    <a href="#hoby">Hobies</a>
                     <a href="#movie">Movies</a>
-                    <a href="#book">Books</a>
                     <a href="#show">TV Shows</a>
-                    <a href="#artist">Artists</a>
+                    <a href="#book">Books</a>
+                    <a href="#music">Music</a>
+                    <a href="#dish">Dishes</a>
                 </div>
             </li>
             <li><a href="#blog">My Blog</a></li>
@@ -201,7 +235,10 @@
     <section><h2>Home Page</h2>
      <figure><img id="me" src="profilna.jpg" height="200dp"/><p></p></figure>
         <section>
-            <p> Hello!</p>
+            <p id="homee">Hello to whoever visiting this page! My name is Mihaela, I'm 21 and I live in Skopje, Macedonia. I'm in my third year of studies towards a bachelor's degree in Telecommunication and Information engineering at FEEIT Skopje.
+                <br><br>I would describe myself as a very enthusiastic student and I’ve been that way since I was little. I have an insatiable thirst for knowledge! Ok, maybe I was (am) just a regular nerd… I have tendencies of analysing every single detail at everything. All in all, I am pretty much an organized person. Oh wait… I see… I didn’t tell you this was my “bragging section”. I am not even sorry! For funnier and more enjoyable stuff click <a href="#favthings"> here</a>.
+                <br><br>Anyway, in my spare time I enjoy reading books, watching movies and listening to good music. Although the “music part” is not just in my spare time. I also love working out. I like to go jogging occasionally, that’s not my favourite type of exercise though. But I really enjoy hiking and going for long walks.
+            </p>
         </section>
     </section>
 
@@ -212,21 +249,44 @@
     </section>
 
     <section id="favthings"><h2>My Favourite Things</h2>
-        <section id="hoby"> <h4>Hobies</h4>
-            <p></p>
-        </section>
+        
         <section id="movie"><h4>Movies</h4>
-            <p></p>
-        </section>
-        <section id="book"><h4>Books</h4>
-            <p></p>
+            <p>Who doesn’t love a good movie on a rainy day? Or binge-worthy TV show when you have a ton of work to do? I know I do.<br>Here are some suggestions for you to rely on when you can’t decide what to watch . </p>
+            <div class="row" style="background-color: rgba(73, 98, 122, 0.664)">
+                <div class="column"><img src="movie1.jpg" height="200dp" /></div> <div class="column"><img /></div><div class="column"><img /></div>
+            </div>
         </section>
         <section id="show"><h4>TV Shows</h4>
             <p></p>
+            <div class="row" style="background-color:  rgba(73, 98, 122, 0.664);">
+                <div class="column"><img src="madmen.jpg" height="200dp" /><p style="float: left;"></p></div>   <div class="column"><img src="gilmore.jpg" height="200dp" /></div>   <div class="column"><img src="brba.jpg" height="200dp" /></div>
+            </div>
         </section>
-        <section id="artist"><h4>Artists</h4>
+        <section id="book"><h4>Books</h4>
+            <p>I LOOOOVE reading books. Over the years it became like a regular habit of mine. A day doesn’t go by without going through at least 9-10 pages. On a good day there are many, many more. 
+                I’ve read some really good books, and some really bad ones too which I successfully survived till the last page. But I never give up on them. Slowly but surely. Maybe next time I would know what not to pick.  
+                <br>*FUN FACT* Just now, I found out that a lot of people read the last page first! Why would someone spoil such adventure to himself?!  Okay, maybe it allows you to look for deeper meaning while reading… I don’t know, I think one can multitask.
+            </p>
+            <div class="row" style="background-color: rgba(73, 98, 122, 0.664);">
+                <div class="column"><img src="memoirs.jpg" height="200dp" /></div> <div class="column"><img src="book2.jpg" height="200dp" /></div>  <div class="column"><img src="book3.jpg" height="200dp" /></div>
+            </div>
+        </section>
+        
+        <section id="music" ><h4>Music</h4>
+            <p >In my playlist you can find anything. Anything of good quality of course. <br>Because I can’t make my mind up about what kind of music I like best at this moment, I’m going to put it on shuffle and see what comes out of it. </p>
+            <div class="row" style="background-color: rgba(73, 98, 122, 0.664);">
+                <div class="column"><img src="artists1.jpg" height="200dp"/></div><div class="column"><img src="artists2.jpg" height="200dp" /></div> <div class="column"><img src="artists3.jpg" height="200dp" /></div>
+            </p>
+        </section>
+        
+        <section id="dish"> <h4>Dishes</h4>
             <p></p>
+            <div class="row" style="background-color: rgba(73, 98, 122, 0.664);">
+                <div class="column"><img /></div>  <div class="column"> <img /></div>  <div class="column"> <img /></div>
+            </div>
         </section>
+
+
     </section>
     
     
@@ -238,7 +298,7 @@
 
     
     <section id="forguests"><h2>For New Guests</h2>
-            <p>Okay... enough about me. Now I want to get to know YOU! Here you can place your information, like your name, your favourite things or any kind of message or sugestion to the world ...and to me. Also feel free to leave your e-mail address to keep up with new updates on the content!  </p>
+            <p>Okay... enough about me. Now I want to get to know YOU!<br> You can place your information or any kind of message or suggestion in the form bellow. Everything is optional of course. However it would mean a lot to me!<br> Also feel free to leave your e-mail address to keep up with new updates on the content!  </p>
             <br>
             <div class="forma">
             <form method = "post" class="container" autocomplete="on">
@@ -312,9 +372,10 @@
                         <input name = "color" type = "radio" 
                             value = "othercolor"></label>
                     
-                 </p>
-
-                <p><Label><strong>Anything Else On Your Mind? </strong>  <input name="text1" type="text"placeholder="What's on your mind" ></Label></p>
+                </p>
+                <p><Label><strong>Favourite Book: </strong>  <input name="text1" type="text"placeholder="Book Title" ></Label></p>
+                <p><Label><strong>Favourite Movie: </strong>  <input name="text2" type="text"placeholder="Movie Title" ></Label></p>
+                <p><Label><strong>Anything Else On Your Mind? </strong>  <input name="text3" type="text"placeholder="What's on your mind" ></Label></p>
                 <p><label><strong>Rate This Page </strong>
                        0 <input type = "range" 
                           min = "0"
@@ -322,7 +383,7 @@
                           value = "5" /> 10
                     </label>
                  </p>
-                 <p><label><strong>Do You Have Any Suggestions For Improvement?  </strong> <br> <input name = "sugg" type = "text" placeholder="Sugestions"></label></p>
+                 <p><label><strong>Do You Have Any Suggestions For Improvement?  </strong> <br> <input name = "sugg" type = "text" placeholder="Suggestions"></label></p>
                  <p><label><strong>Send Us Your E-mail To Receive Updates!  </strong>  <input name = "maill" type = "text" size = "25" maxlength = "30" placeholder="E-mail Address"></label></p>
               
                 <p><input class="btn" type = "submit" value = "Submit" />
@@ -336,7 +397,7 @@
     <section id="contact"><h2>How To Contact Me</h2>
             <p><div >
                     
-                     <img src="contact1.jpg " width="40%" style="float:right;"/><p style="float: left;">Send me an E-mail <a href = "mailto:mihaela.petrovska2@gmail.com">here.</a><br><a href="https://www.facebook.com/profile.php?id=100001324047198"> Facebook Profile</a>
+                     <img src="contact1.jpg " width="40%" style="float:right;"/><p style="float: left;">To send me an E-mail click <a href = "mailto:mihaela.petrovska2@gmail.com">here.</a> <br>You can also find me on social media: </a><br><a href="https://www.facebook.com/profile.php?id=100001324047198"> Facebook Profile</a>
                     <br> <a href="https://www.facebook.com/profile.php?id=100001324047198"> Instagram Account   </a></p>
                 </div>
               </p>
