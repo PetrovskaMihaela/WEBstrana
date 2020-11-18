@@ -350,7 +350,7 @@ figure{
     content: '';
     position: absolute;
     width: 6px;
-    background-color: white;
+    background-color: rgba(47, 72, 105, 0.842);
     top: 0;
     bottom: 0;
     left: 50%;
@@ -369,10 +369,10 @@ figure{
     width: 25px;
     height: 25px;
     right: -17px;
-    background-color: white;
-    border: 4px solid #FF9F55;
+    background-color: rgba(223, 223, 223, 0.938);
+    border: 4px solid #dfa75df6;
     top: 15px;
-    border-radius: 50%;
+    border-radius: 30%;
     z-index: 1;
   }
   
@@ -417,7 +417,7 @@ figure{
     padding: 20px 30px;
     background-color: white;
     position: relative;
-    border-radius: 6px;
+    border-radius: 12px;
   }
   
   @media screen and (max-width: 600px) {
