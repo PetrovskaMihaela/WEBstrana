@@ -4,318 +4,500 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mihaela Petrovska</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="logo.jpg" type="image/x-icon"/>
-
-    <style type="text/css">
-        h2{
-            font-weight: bold;
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            color: darkslategray;
-            font-size: 50;
-            padding-top: 4%;
-            padding-left: 2%;   
-        }
-        h3 { font-weight: bolder;
-            color:rgba(255, 255, 255, 0.664);
-            text-shadow: rgb(0, 0, 0);
-            font-family: Arial, Helvetica, sans-serif;
-            font-optical-sizing: auto;
-            text-align: right;
-            padding-right: 5%;
-            }
-        h4{
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            font-size: large;
-            font-style: italic;
-            padding-top: 2%;
-            padding-left:2% ;
-            color:rgba(60, 79, 99, 0.884);
-        }
-        h5 {font-weight: bold;
-            font-family: Arial, Helvetica, sans-serif;
-            font-style: italic;
-            color:rgba(255, 255, 255, 0.664);
-            text-shadow: rgb(0, 0, 0);
-            text-align: right;
-            font-weight: light;
-            padding-right: 6%;
-            }
-        p {
-            font-size: larger;
-            color: darkslategray;
-            text-shadow: dimgray;
-            padding-right: 2%;
-            padding-left: 2%;
-            font-family:Arial, Helvetica, sans-serif;
-            }
-        
-        header { 
-            background-image: url("background2.jpg");
-            background-color:lavander;
-            background-repeat:no-repeat;
-            background-size:cover;   
-        }
-        footer{
-            background-color:rgba(73, 98, 122, 0.753) ;
-            text-align: right;
-            
-        }
-        
-        /*img {
-             border: 5px solid rgba(194, 191, 191, 0.637);
-             border-style: groove;
-        }*/
-
-        /*css for dropdown menu*/
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow:hidden;
-            background-color:rgba(73, 98, 122, 0.753);
-            color:rgba(215, 215, 230, 0.63)
-        }
-
-        li {
-            float: left;
-        }
-        li a, .dropbutton {
-            display: inline-block;
-            color:rgba(215, 215, 230, 0.705);
-            text-align: center;
-            padding: 15px 40px;
-            text-decoration: none;
-            font-size:20px;
-            text-shadow:white;
-            font-family:sans-serif;
-        }
-        li a:hover, .dropdown:hover .dropbutton {
-            background-color:rgba(215, 215, 230, 0.63);
-            color: rgba(73, 98, 122, 0.753);
-        }
-        li.dropdown {
-            display:inline-block;
-        }
-        .dropdown-content{
-            display: none;
-            position: absolute;
-             background-color: #f1f1f1;
-             min-width: 20%;
-             overflow: auto;
-             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-             z-index: 1;
-        }
-        .dropdown-content a {
-            color:rgba(73, 98, 122, 0.753);
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-        .dropdown-content a:hover {background-color:rgba(215, 215, 230, 0.63)}
-        .dropdown:hover .dropdown-content {display: block; }
-        .dropdown:hover .dropbutton {background-color:rgba(215, 215, 230, 0.705);}
-       
-       /*css for home page*/
-        #homee{
-           position: relative;
-           
-        }
-        #me{
-           position: relative;
-           float:left;
-           padding-right: 2%;
-           border:none;
-        }
-
-       /*css for favourite things*/
-        #favthings{
-            background-image:url("ftb1.jpg");
-            background-repeat:no-repeat;
-            background-size:cover;
-        }
-        .column{
-            float: left;
-            width: 33.33%;
-            padding: 5px;
-        }
-        .row::after {
-            content: "";
-            clear: both;
-            display: table;
-             
-        }
-        figure{
-            color: rgba(240, 240, 240, 0.753);
-            font-weight: bold;
-            font-family: sans-serif;
-        }
-
-        /* css for the form*/
-        body, html {
-            height: 100%;
-        }
-        * {
-            box-sizing:border-box;
-        }
-        .forma {
-            background-image: url("formimage.jpg");
-           /* min-height: 380px;*/
-            background-position:center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: relative;
-        }
-        .container {
-            position: relative;
-            right: 0;
-            margin: 20px;
-            max-width: 600px;
-            padding: 16px;
-            background-color:rgba(73, 98, 122, 0.774) ;
-        }
-        input[type=text] {
-            width: 100%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
-            border: none;
-            background: #f1f1f1;
-        }
-        input[type=text]:focus {
-            background-color: #ddd;
-            outline: none;
-        }
-        .btn {
-            background-color:rgba(73, 98, 122, 0.753);
-            color: white;
-            padding: 16px 20px;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            opacity: 0.9;
-        }
-        .btn:hover {
-            opacity: 1;
-            color: rgb(100, 27, 27);
-        }
-        /*css for contact section*/
-        #contact{
-            position: relative;
-            margin-bottom: 20%;
-        }
-    </style>
+    <link rel = "stylesheet" type = "text/css"
+    href = "webstrana.css">
+    <script src = "changeSections.js"></script>
+    <script src="likes.js"></script>
+    <!--<script src = "changeSlides.js"></script>-->
+    <!--<script src="comments.js"></script>-->
     
    
 </head>
 
-<body style="background-color:rgba(215, 215, 230, 0.705)">
+<body onload="showSection(1)" style="background-color:rgba(110, 126, 136, 0.801)">
     
     
+
+
+
     <header>
         <br>
         <h3> Welcome to Mihaela's web page! </h3><br><br><br>
         <h5> We hope you'll enjoy the content. </h5>
         
-      
-        <ul  >
-            <li><a class="active" href="#home"> Home</a></li>
-            <li><a href="#gallery">My Gallery</a></li>
-            <li class="dropdown">
-                <a class="dropbutton" href="#favthings"> My Favourite Things    </a>   
+        <div class="navigation-container">
+            <div class="logo"> <h3>menu</h3></div>
+            <ul class="nav-links">
+                <li><a onclick="currentSection(1)" class="activee">Home</a></li>
+                <li><a onclick="currentSection(2)" >About Me</a></li>
+                <li><a onclick="currentSection(3)">My Gallery</a></li>
+                <li class="dropdown">
+                    <a class="dropbutton"  onclick="currentSection(4)"> My Favourite Things    </a>   
                
-                <div class="dropdown-content">
-                    <a href="#movie">Movies</a>
-                    <a href="#show">TV Shows</a>
-                    <a href="#book">Books</a>
-                    <a href="#music">Music</a>
-                    <a href="#dish">Dishes</a>
-                </div>
-            </li>
-            <li><a href="#blog">My Blog</a></li>
-            <li><a href="#forguests">For New Guests</a></li>
-            <li><a href="#contact">How To Contact Me</a></li>
-        </ul>
-         
+                    <div class="dropdown-content">
+                        <a href="#movie">Movies</a>
+                        <a href="#show">TV Shows</a>
+                        <a href="#book">Books</a>
+                        <a href="#music">Music</a>
+                        <a href="#dish">Dishes</a>
+                    </div>
+                </li>
+                <li><a onclick="currentSection(5)" >My Blog</a></li>
+                <li><a onclick="currentSection(6)">For New Guests</a></li>
+                <li><a onclick="currentSection(7)" >How To Contact Me</a></li>
+            </ul>
+        </div>
+        
     </header> 
-    
    
 
-    <section><h2>Home Page</h2>
-     <figure><img id="me" src="profilna.jpg" height="200dp"/><p></p></figure>
-        <section>
-            <p id="homee">Hello to whoever visiting this page! My name is Mihaela, I'm 21 and I live in Skopje, Macedonia. I'm in my third year of studies towards a bachelor's degree in Telecommunication and Information engineering at FEEIT Skopje.
+
+
+
+
+<div id="sections-container">
+    <div class="mySections" id="home" >
+        <div class="bg-image"><img src="profilnabg.jpg" width="100%"/> </div>
+
+  <div class="bg-text">
+      <h2>WELCOME</h2>
+  <h1 style="font-size:50px">I am Mihaela Petrovska</h1><br><img class="circular--square" src="gallery9.jpg" />
+  <br><p>engineering - telecommunications - programming</p>
+</div>
+
+
+
+
+
+
+    </div>   
+    <div class="mySections row1" id="aboutme" onload="showSlides(1)"><h2>About Me</h2>
+     
+        
+            <p class="column1" id="homee">Hello to whoever visiting this page! My name is Mihaela, I'm 21 and I live in Skopje, Macedonia. I'm in my third year of studies towards a bachelor's degree in Telecommunication and Information engineering at FEEIT Skopje.
                 <br><br>I would describe myself as a very enthusiastic student and I’ve been that way since I was little. I have an insatiable thirst for knowledge! Ok, maybe I was (am) just a regular nerd… I have tendencies of analysing every single detail at everything. All in all, I am pretty much an organized person. Oh wait… I see… I didn’t tell you this was my “bragging section”. I am not even sorry! For funnier and more enjoyable stuff click <a href="#favthings"> here</a>.
                 <br><br>Anyway, in my spare time I enjoy reading books, watching movies and listening to good music. Although the “music part” is not just in my spare time. I also love working out. I like to go jogging occasionally, that’s not my favourite type of exercise though. But I really enjoy hiking and going for long walks.
             </p>
-        </section>
-    </section>
-
-    <section id="gallery"><h2>My Gallery</h2> 
-           <section>
-               <p>Stay tuned for more content!</p>
-           </section>
-    </section>
-
-    <section id="favthings"><h2>My Favourite Things</h2>
         
-        <section id="movie"><h4>Movies</h4>
+        <div class="slideshow-container column1">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 9</div>
+              <img src="gallery9.jpg" style="width:100%">
+              
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 9</div>
+              <img src="gallery8.jpg" style="width:100%">
+              
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 9</div>
+              <img src="gallery7.jpg" style="width:100%">
+              
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 9</div>
+                <img src="gallery6.jpg" style="width:100%">
+                
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">5 / 9</div>
+                <img src="gallery5.jpg" style="width:100%">
+                
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">6 / 9</div>
+                <img src="gallery4.jpg" style="width:100%">
+                
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">7 / 9</div>
+                <img src="gallery3.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">8 / 9</div>
+                <img src="gallery2.jpg" style="width:100%">
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">9 / 9</div>
+                <img src="gallery1.jpg" style="width:100%">
+              </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span> 
+              <span class="dot" onclick="currentSlide(5)"></span> 
+              <span class="dot" onclick="currentSlide(6)"></span>
+              <span class="dot" onclick="currentSlide(7)"></span> 
+              <span class="dot" onclick="currentSlide(8)"></span> 
+              <span class="dot" onclick="currentSlide(9)"></span> 
+            </div></div>
+    </div>
+
+   <!----------------------------
+    skripta za slideshow
+    -------------------------- -->
+    <script type="text/javascript">
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+       showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+       var i;
+       var slides = document.getElementsByClassName("mySlides");
+       var dots = document.getElementsByClassName("dot");
+       if (n > slides.length) {slideIndex = 1}    
+       if (n < 1) {slideIndex = slides.length}
+       for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+       }
+       slides[slideIndex-1].style.display = "block";  
+       dots[slideIndex-1].className += " active";
+    }
+    </script>
+    
+
+
+
+ 
+
+    
+    <div class="mySections" id="gallery"><h2>My Gallery</h2> 
+        <div class="row">
+            <div class="column" style="background-color:#aaa;">
+                <div class="card">
+                    <img src="gallery9.jpg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <p><button onclick="clickCounter()" type="button">Like</button></p>
+                        <div id="result"></div> 
+
+                      <p><div class="comment">
+                           <textarea id="title" type="text "rows="2" cols="20" onkeyup="Allow()" placeholder="write a comment......"></textarea>
+                           <input type="submit" value="Post" onclick="insert()" style="width:20px;" /></form>
+                        </div>
+                          <div id="display" ></div>
+                      </p> 
+<!----------------------------
+    skripta za komentari
+-------------------------- -->
+    <script type="text/javascript">
+      var titles = [];
+      var titleInput = document.getElementById("title");
+      var messageBox = document.getElementById("display");
+      function Allow()
+      {
+      if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
+      {
+      user.title.value="";
+      alert("Please Enter only alphabets");
+      }
+      window.location.reload()
+      }
+      function insert () {
+      titles.push(titleInput.value);
+      clearAndShow();
+      }
+      function clearAndShow ()
+      {
+      titleInput.value = "";
+      messageBox.innerHTML = "";
+      messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+      }
+      </script>
+                    </div>
+                
+  
+
+                  </div>
+                  <div class="card">
+                    <img src="gallery6.jpg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <p><button onclick="clickCounter()" type="button">Like</button></p>
+                        <div id="result"></div> 
+                      <p><div class="comment">
+                        <textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="write a comment......"></textarea>
+                        <input type="submit" value="Post" onclick="insert()" style="width:20px;" /></form>
+                        </div>
+                        <div id="display"></div></p>
+
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="gallery3.jpg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <p><button onclick="clickCounter()" type="button">Like</button></p>
+                        <div id="result"></div> 
+                      <p><p><div class="comment">
+                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
+                        <br><input type="submit" value="Post" onclick="insert()" style="width:50px;"  /></form>
+                        </div>
+                        <div id="display" onload="clearAndShow()"></div>
+                      </p></p> 
+                    </div>
+                  </div>
+            </div>
+            <div class="column" style="background-color:#bbb;">
+                <div class="card">
+                    <img src="gallery8.jpg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <p><button onclick="clickCounter()" type="button">Like</button></p>
+                        <div id="result"></div> 
+                      <p><p><div class="comment">
+                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow(3)" placeholder="write a comment......"></textarea>
+                        <br><input type="submit" value="Post" onclick="insert(3)" style="width:50px;"  /></form>
+                        </div>
+                        <div id="display" onload="clearAndShow(3)"></div>
+                      </p></p> 
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="gallery5.jpg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <p><button onclick="clickCounter()" type="button">Like</button></p>
+                        <div id="result"></div>
+                      <p><p><div class="comment">
+                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow(4)" placeholder="write a comment......"></textarea>
+                        <br><input type="submit" value="Post" onclick="insert(4)" style="width:50px;"  /></form>
+                        </div>
+                        <div id="display" onload="clearAndShow(4)"></div>
+                      </p></p> 
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="gallery2.jpg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <p><button onclick="clickCounter()" type="button">Like</button></p>
+                        <div id="result"></div>
+                      <p><p><div class="comment">
+                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow(5)" placeholder="write a comment......"></textarea>
+                        <br><input type="submit" value="Post" onclick="insert(5)" style="width:50px;"  /></form>
+                        </div>
+                        <div id="display" onload="clearAndShow(5)"></div>
+                      </p></p> 
+                    </div>
+                  </div>
+            </div>
+            <div class="column" style="background-color:#ccc;">
+                 <div class="card">
+                    <img src="gallery7.jpg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <p><button onclick="clickCounter()" type="button">Like</button></p>
+                        <div id="result"></div> 
+                      <p><p><div class="comment">
+                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow(6)" placeholder="write a comment......"></textarea>
+                        <br><input type="submit" value="Post" onclick="insert(6)" style="width:50px;"  /></form>
+                        </div>
+                        <div id="display" onload="clearAndShow(6)"></div>
+                      </p></p> 
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="gallery4.jpg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <p><button onclick="clickCounter()" type="button">Like</button></p>
+                        <div id="result"></div> 
+                      <p><p><div class="comment">
+                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow(7)" placeholder="write a comment......"></textarea>
+                        <br><input type="submit" value="Post" onclick="insert(7)" style="width:50px;"  /></form>
+                        </div>
+                        <div id="display" onload="clearAndShow(7)"></div>
+                      </p></p> 
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="gallery1.jpg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <p><button onclick="clickCounter()" type="button">Like</button></p>
+                        <div id="result"></div> 
+                      <p><p><div class="comment">
+                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow(8)" placeholder="write a comment......"></textarea>
+                        <br><input type="submit" value="Post" onclick="insert(8)" style="width:50px;"  /></form>
+                        </div>
+                        <div id="display" onload="clearAndShow(8)"></div>
+                      </p></p> 
+                    </div>
+                  </div>
+            </div>
+          </div>
+        
+    
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="mySections" id="favthings"><h2>My Favourite Things</h2>
+        
+        <div id="movie"><h4>Movies</h4>
             <p>Who doesn’t love a good movie on a rainy day? Or binge-worthy TV show when you have a ton of work to do? I know I do.<br>Here are some suggestions for you to rely on when you can’t decide what to watch . </p>
             <div class="row" style="background-color: rgba(73, 98, 122, 0.664)">
                 <div class="column"><figure><img src="movie1.jpg" height="200dp" /><br>Good Will Hunting (1997)</figure></div> 
                 <div class="column"><figure><img src="movie2.jpg" height="200dp"/><br> The Shawshank Redemption (1994)</figure></div>
                 <div class="column"><figure><img src="movie3.jpg" height="200dp" /><br> Leon The Professional (1994)</figure></div>
             </div>
-        </section>
-        <section id="show"><h4>TV Shows</h4>
+        </div>
+        <div id="show"><h4>TV Shows</h4>
             <p></p>
             <div class="row" style="background-color:  rgba(73, 98, 122, 0.664);">
-                <div class="column"><figure><img src="madmen.jpg" height="200dp"/><br>Mad Man (2007)</figure></div>   
-                <div class="column"><figure><img src="gilmore.jpg" height="200dp" /><br>Gilmore Girls (2000)</figure></div>   
-                <div class="column"><figure><img src="brba.jpg" height="200dp" /><br>Breaking Bad (2008)</figure></div>
+                <div class="column"><figure><img src="tvshow1.jpg" height="200dp"/><br>Mad Man (2007)</figure></div>   
+                <div class="column"><figure><img src="tvshow2.jpg" height="200dp" /><br>Gilmore Girls (2000)</figure></div>   
+                <div class="column"><figure><img src="tvshow3.jpg" height="200dp" /><br>Breaking Bad (2008)</figure></div>
             </div>
-        </section>
-        <section id="book"><h4>Books</h4>
+        </div>
+        <div id="book"><h4>Books</h4>
             <p>I LOOOOVE reading books. Over the years it became like a regular habit of mine. A day doesn’t go by without going through at least 9-10 pages. On a good day there are many, many more. 
                 I’ve read some really good books, and some really bad ones too which I successfully survived till the last page. But I never give up on them. Slowly but surely. Maybe next time I would know what not to pick.  
                 <br>*FUN FACT* Just now, I found out that a lot of people read the last page first! Why would someone spoil such an adventure for themselves?!  Okay, maybe it allows you to look for deeper meaning while reading… I don’t know, I think one can multitask.
             </p>
             <div class="row" style="background-color: rgba(73, 98, 122, 0.664);">
-                <div class="column"><figure><img src="memoirs.jpg" height="200dp" /><br><em> "Memoirs of a Geisha"</em><br> Arthur Golden</figure></div> 
+                <div class="column"><figure><img src="book1.jpg" height="200dp" /><br><em> "Memoirs of a Geisha"</em><br> Arthur Golden</figure></div> 
                 <div class="column"><figure><img src="book2.jpg" height="200dp" /><br> <em>"The Girl Who Kicked The Hornets' Nest"<br>Millennium</em> (novel series)<br>Stieg Larson</figure></div>  
                 <div class="column"><figure><img src="book3.jpg" height="200dp" /><br> <em>"Angels and Demons"</em><br>Dan Brown</figure></div>
             </div>
-        </section>
+        </div>
         
-        <section id="music" ><h4>Music</h4>
+        <div id="music" ><h4>Music</h4>
             <p >In my playlist you can find anything. Everything of good quality of course. <br>Because I can’t make my mind up about what kind of music I like best at this moment, I’m going to put it on shuffle and see what comes out of it. </p>
             <div class="row" style="background-color: rgba(73, 98, 122, 0.664);">
                 <div class="column"><figure><img src="artists1.jpg" height="200dp"/><br>Dire Straits</figure></div>
                 <div class="column"><figure><img src="artists2.jpg" height="200dp"/><br>Foltin Band</figure></div> 
                 <div class="column"><figure><img src="artists3.jpg" height="200dp" /><br>Sade</figure></div>
-            </p>
-        </section>
-        
-        <!--<section id="dish"> <h4>Dishes</h4>
-            <p></p>
-            <div class="row" style="background-color: rgba(73, 98, 122, 0.664);">
-                <div class="column"><figure><img /></figure></div>  
-                <div class="column"><figure><img /></figure></div>  
-                <div class="column"><figure><img /></figure></div>
+            
             </div>
-        </section>-->
+            
+        </div><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <script>
+          var mybutton = document.getElementById("myBtn");
+          
+          window.onscroll = function() {scrollFunction()};
+          
+          function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+            } else {
+              mybutton.style.display = "none";
+            }
+          }
+          function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+          }
+          </script>
+    </div>
+    
 
 
-    </section>
-    
-    
-    
-    <section id="blog"><h2>My Blog</h2>
-        <p>Stay tuned for more content!</p>
-    </section>
-    
 
     
-    <section id="forguests"><h2>For New Guests</h2>
+    <div class="mySections" id="blog"><h2>My Blog</h2>
+      <div class="timeline">
+        <div>
+          <form style="padding-left: 5%;"><textarea id="post" type="text "rows="5" cols="50"  placeholder="Here you can write a post......" ></textarea>
+          <input type="submit" value="Post" onclick="insert()" style="width:50px;" /></form>
+       </div>
+ <script>
+        var post;
+       var Input = document.getElementById("postInput");
+       var displayBox = document.getElementById("displayPost");
+     
+       function insert () {
+       post.push(Input.value);
+       Show();
+       }
+       function Show ()
+       {
+       displayBox.innerHTML = "";
+       displayBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+       }
+   </script>
+        <div class="container1 right">
+          <div class="content" id="postInput">
+            <h2>New article goes here</h2>
+            <p id="display"></p>
+              
+            </p>
+          </div>
+        </div>
+        <div class="container1 left">
+          <div class="content">
+            <h2>2019</h2>
+            <p>text</p>
+          </div>
+        </div>
+        <div class="container1 right">
+          <div class="content">
+            <h2>2018</h2>
+            <p>text</p>
+          </div>
+        </div>
+        <div class="container1 left">
+          <div class="content">
+            <h2>2017</h2>
+            <p>text</p>
+          </div>
+        </div>
+        <div class="container1 right">
+          <div class="content">
+            <h2>2016</h2>
+            <p>text</p>
+          </div>
+        </div>
+        <div class="container1 left">
+          <div class="content">
+            <h2>2015</h2>
+            <p>text</p>
+          </div>
+        </div>
+        <div class="container1 right">
+          <div class="content">
+            <h2>2014</h2>
+            <p>text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+    
+    <div class="mySections" id="forguests"><h2>For New Guests</h2>
             <p>Okay... enough about me. Now I want to get to know YOU!<br> You can place your information or any kind of message or suggestion in the form bellow. Everything is optional of course. However it would mean a lot to me!<br> Also feel free to leave your e-mail address to keep up with new updates on the content!  </p>
             <br>
             <div class="forma">
@@ -323,7 +505,7 @@
                 <input type = "hidden" name = "recipient" value = "mihaelapetrovska2@gmail.com">
                 <input type = "hidden" name = "subject" value = "Feedback Form">
                 <input type = "hidden" name = "redirect" value = "main.html">
-            
+                
                 <p><label><strong>Please Write Your Name:  </strong>  <input name = "name" type = "text" size = "25" maxlength = "30" placeholder="Name"></label></p>
                 
                 <p><strong> Your Gender:</strong><br>
@@ -409,18 +591,41 @@
                 <br> 
             </form></div>
 
-     </section>
+        </div>
     
 
-    <section id="contact"><h2>How To Contact Me</h2>
-            <p><div >
+
+
+
+
+
+
+
+    <div class="mySections" id="contact"><h2>How To Contact Me</h2>
+            <p>
+                <div>
+                    <img src="contact1.jpg " width="40%" style="float:right;"/>
+                    <p style="float: left;"> To send me an E-mail click <a href = "mailto:mihaela.petrovska2@gmail.com">here.</a> <br>You can also find me on social media: </a><br>
+                      <a href="https://www.facebook.com/profile.php?id=100001324047198" class="fa fa-facebook"></a>
+                      <a href="https://www.linkedin.com/in/mihaela-petrovska-3a11011bb/" class="fa fa-linkedin"></a>
+                      <a href="https://www.instagram.com/petrovskamihaela/?hl=en" class="fa fa-instagram"></a>
                     
-                     <img src="contact1.jpg " width="40%" style="float:right;"/><p style="float: left;">To send me an E-mail click <a href = "mailto:mihaela.petrovska2@gmail.com">here.</a> <br>You can also find me on social media: </a><br><a href="https://www.facebook.com/profile.php?id=100001324047198"> Facebook Profile</a>
-                    <br> <a href="https://www.instagram.com/petrovskamihaela/?hl=en"> Instagram Account   </a></p>
                 </div>
-              </p>
+            </p>
         
-    </section>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 
     <footer>
         <p><br> <img src="logo.jpg" width="45dp" height="40dp" /><br><em>Mihaela Petrovska</em>  <br> <em> October 2020 </em> </p> 
