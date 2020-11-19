@@ -55,13 +55,3 @@ function clearAndShow(n) {
 
 
 
-/*var comment;
-var comments = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-function insert(clickedId) {
-   comment = window.prompt("Insert a comment here...");
-   _id=clicked_id-50;
-   document.getElementById(_id).innerHTML += comment + "<br>";
-   _id=clicked_id-10;   
-   comments[clicked_id-51]++;                
-   document.getElementById(_id).innerHTML = comments[clicked_id-51];         
-}*/

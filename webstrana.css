@@ -341,6 +341,18 @@ figure{
 
 /* BLOG */
 
+  .textblog{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  .textblog:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
   .timeline {
     position: relative;
     max-width: 1000px;
@@ -500,7 +512,7 @@ input[type=text]:focus {
 }
 .btn:hover {
     opacity: 1;
-    color: rgb(100, 27, 27);
+    color: rgba(238, 161, 46, 0.932);
 }
 
 

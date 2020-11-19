@@ -8,8 +8,12 @@
     <link rel="icon" href="logo.jpg" type="image/x-icon"/>
     <link rel = "stylesheet" type = "text/css"
     href = "webstrana.css">
+
     <script src = "changeSections.js"></script>
     <script src="likes.js"></script>
+
+    <!--   changeSlides.js ----- ja ima vo body----- comments.js----Treba da ja dorabotam -->
+    
     <!--<script src = "changeSlides.js"></script>-->
     <!--<script src="comments.js"></script>-->
     
@@ -153,42 +157,10 @@
             </div></div>
     </div>
 
-   <!----------------------------
-    skripta za slideshow
-    -------------------------- -->
-    <script type="text/javascript">
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-       showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-       var i;
-       var slides = document.getElementsByClassName("mySlides");
-       var dots = document.getElementsByClassName("dot");
-       if (n > slides.length) {slideIndex = 1}    
-       if (n < 1) {slideIndex = slides.length}
-       for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
-        }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-       }
-       slides[slideIndex-1].style.display = "block";  
-       dots[slideIndex-1].className += " active";
-    }
-    </script>
+   
     
 
 
-
- 
 
     
     <div class="mySections" id="gallery"><h2>My Gallery</h2> 
@@ -201,42 +173,12 @@
                         <div id="result"></div> 
 
                       <p><div class="comment">
-                           <textarea id="title" type="text "rows="2" cols="20" onkeyup="Allow()" placeholder="write a comment......"></textarea>
+                           <form onsubmit="return false"><textarea id="title1" type="text "rows="2" cols="20" onkeyup="Allow()" placeholder="write a comment......"></textarea>
                            <input type="submit" value="Post" onclick="insert()" style="width:20px;" /></form>
                         </div>
-                          <div id="display" ></div>
+                          <div id="display1" ></div>
                       </p> 
-<!----------------------------
-    skripta za komentari
--------------------------- -->
-    <script type="text/javascript">
-      var titles = [];
-      var titleInput = document.getElementById("title");
-      var messageBox = document.getElementById("display");
-      function Allow()
-      {
-      if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
-      {
-      user.title.value="";
-      alert("Please Enter only alphabets");
-      }
-      window.location.reload()
-      }
-      function insert () {
-      titles.push(titleInput.value);
-      clearAndShow();
-      }
-      function clearAndShow ()
-      {
-      titleInput.value = "";
-      messageBox.innerHTML = "";
-      messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
-      }
-      </script>
                     </div>
-                
-  
-
                   </div>
                   <div class="card">
                     <img src="gallery6.jpg" alt="Avatar" style="width:100%">
@@ -272,10 +214,10 @@
                         <p><button onclick="clickCounter()" type="button">Like</button></p>
                         <div id="result"></div> 
                       <p><p><div class="comment">
-                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow(3)" placeholder="write a comment......"></textarea>
-                        <br><input type="submit" value="Post" onclick="insert(3)" style="width:50px;"  /></form>
+                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
+                        <br><input type="submit" value="Post" onclick="insert()" style="width:50px;"  /></form>
                         </div>
-                        <div id="display" onload="clearAndShow(3)"></div>
+                        <div id="display" onload="clearAndShow()"></div>
                       </p></p> 
                     </div>
                   </div>
@@ -285,10 +227,10 @@
                         <p><button onclick="clickCounter()" type="button">Like</button></p>
                         <div id="result"></div>
                       <p><p><div class="comment">
-                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow(4)" placeholder="write a comment......"></textarea>
-                        <br><input type="submit" value="Post" onclick="insert(4)" style="width:50px;"  /></form>
+                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
+                        <br><input type="submit" value="Post" onclick="insert()" style="width:50px;"  /></form>
                         </div>
-                        <div id="display" onload="clearAndShow(4)"></div>
+                        <div id="display" onload="clearAndShow()"></div>
                       </p></p> 
                     </div>
                   </div>
@@ -298,10 +240,10 @@
                         <p><button onclick="clickCounter()" type="button">Like</button></p>
                         <div id="result"></div>
                       <p><p><div class="comment">
-                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow(5)" placeholder="write a comment......"></textarea>
-                        <br><input type="submit" value="Post" onclick="insert(5)" style="width:50px;"  /></form>
+                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
+                        <br><input type="submit" value="Post" onclick="insert()" style="width:50px;"  /></form>
                         </div>
-                        <div id="display" onload="clearAndShow(5)"></div>
+                        <div id="display" onload="clearAndShow()"></div>
                       </p></p> 
                     </div>
                   </div>
@@ -313,10 +255,10 @@
                         <p><button onclick="clickCounter()" type="button">Like</button></p>
                         <div id="result"></div> 
                       <p><p><div class="comment">
-                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow(6)" placeholder="write a comment......"></textarea>
-                        <br><input type="submit" value="Post" onclick="insert(6)" style="width:50px;"  /></form>
+                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
+                        <br><input type="submit" value="Post" onclick="insert()" style="width:50px;"  /></form>
                         </div>
-                        <div id="display" onload="clearAndShow(6)"></div>
+                        <div id="display" onload="clearAndShow()"></div>
                       </p></p> 
                     </div>
                   </div>
@@ -326,10 +268,10 @@
                         <p><button onclick="clickCounter()" type="button">Like</button></p>
                         <div id="result"></div> 
                       <p><p><div class="comment">
-                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow(7)" placeholder="write a comment......"></textarea>
-                        <br><input type="submit" value="Post" onclick="insert(7)" style="width:50px;"  /></form>
+                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
+                        <br><input type="submit" value="Post" onclick="insert()" style="width:50px;"  /></form>
                         </div>
-                        <div id="display" onload="clearAndShow(7)"></div>
+                        <div id="display" onload="clearAndShow()"></div>
                       </p></p> 
                     </div>
                   </div>
@@ -339,10 +281,10 @@
                         <p><button onclick="clickCounter()" type="button">Like</button></p>
                         <div id="result"></div> 
                       <p><p><div class="comment">
-                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow(8)" placeholder="write a comment......"></textarea>
-                        <br><input type="submit" value="Post" onclick="insert(8)" style="width:50px;"  /></form>
+                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
+                        <br><input type="submit" value="Post" onclick="insert()" style="width:50px;"  /></form>
                         </div>
-                        <div id="display" onload="clearAndShow(8)"></div>
+                        <div id="display" onload="clearAndShow()"></div>
                       </p></p> 
                     </div>
                   </div>
@@ -407,35 +349,24 @@
 
 
     
+    
+  
+       
     <div class="mySections" id="blog"><h2>My Blog</h2>
+      
       <div class="timeline">
-        <div>
-          <form style="padding-left: 5%;"><textarea id="post" type="text "rows="5" cols="50"  placeholder="Here you can write a post......" ></textarea>
-          <input type="submit" value="Post" onclick="insert()" style="width:50px;" /></form>
+        <div><div class="container1 left"><form class="content" onsubmit="return false">
+          <textarea class="textblog" id="blogHeaderInput" type="text" rows="1" cols="50" placeholder="Title"></textarea>
+          <br><textarea class="textblog" id="blogInput" type="text "rows="5" cols="50"  placeholder="Here you can write a post......" ></textarea>
+         
+        </form> <input type='button' class="btn" value="Post" onclick="insertBlog()" style="width:100px;"  />
        </div>
- <script>
-        var post;
-       var Input = document.getElementById("postInput");
-       var displayBox = document.getElementById("displayPost");
-     
-       function insert () {
-       post.push(Input.value);
-       Show();
-       }
-       function Show ()
-       {
-       displayBox.innerHTML = "";
-       displayBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
-       }
-   </script>
-        <div class="container1 right">
-          <div class="content" id="postInput">
-            <h2>New article goes here</h2>
-            <p id="display"></p>
-              
-            </p>
+         <div  class="container1 right">
+          <div  class="content">
+           <h2 id="displayBlogHeader">New article goes here</h2>
+           <p id="displayBlog"> ...</p>
           </div>
-        </div>
+        </div></div>
         <div class="container1 left">
           <div class="content">
             <h2>Date/Title</h2>
@@ -603,6 +534,49 @@
 
 
 </div><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<footer>
+  <p><br> <img src="logo.jpg" width="45dp" height="40dp" /><br><em>Mihaela Petrovska</em>  <br> <em> October 2020 </em> </p> 
+</footer>
+
+
+
+   <!----------------------------
+    skripta za slideshow
+    -------------------------- -->
+    <script type="text/javascript">
+      var slideIndex = 1;
+      showSlides(slideIndex);
+  
+      function plusSlides(n) {
+         showSlides(slideIndex += n);
+      }
+  
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+  
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+    </script>
+
+
+<!----------------------
+     skripta za button GoToTop
+  -----------------------  -->
+
 <script>
   var mybutton = document.getElementById("myBtn");
   
@@ -622,14 +596,65 @@
   </script>
 
 
+  <!----------------------------
+       skripta za komentari
+   ---------------------------- -->
+    <script type="text/javascript">
+      var titles = [];
+      var titleInput = document.getElementById("title1");
+      var messageBox = document.getElementById("display1");
+      /*function Allow()
+      {    MOZEBI KJE KORISTI ZA PONATAKA
+        if (!user.title1.value.match(/[a-zA-Z]$/) && user.title1.value !="")
+        {
+          user.title1.value="";
+          alert("Please Enter only alphabets");
+        }
+        window.location.reload()
+      }*/
+      function insert () {
+      titles.push(titleInput.value);
+      clearAndShow();
+      }
+      function clearAndShow ()
+      {
+        titleInput.value = "";
+        messageBox.innerHTML = "";
+        messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+      }
+      </script>
+<!-------------------------
+    Skripta za blog
+  -------------------------->
+
+  <script>
+      var postt=[];
+      var posttHeader=[];
+      var InputHeader=document.getElementById("blogHeaderInput");
+      var Input = document.getElementById("blogInput");
+      var displayBox = document.getElementById("displayBlog");
+      var displayBoxHeader=document.getElementById("displayBlogHeader")
+      
+      function insertBlog () {
+        postt.push(Input.value);
+        posttHeader.push(InputHeader.value);
+        ShowBlog();
+      }
+      function ShowBlog ()
+      {
+        Input.value="";
+        InputHeader.value="";
+        displayBoxHeader.innerHTML="";
+        displayBoxHeader.innerHTML += " " + posttHeader.join("<br/> ") + "<br/>";
+        displayBox.innerHTML = "";
+        displayBox.innerHTML += " " + postt.join("<br/> ") + "<br/>";
+      }
+   </script>
 
 
 
 
 
-    <footer>
-        <p><br> <img src="logo.jpg" width="45dp" height="40dp" /><br><em>Mihaela Petrovska</em>  <br> <em> October 2020 </em> </p> 
-    </footer>
 
 
     </body>
