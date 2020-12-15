@@ -11,11 +11,9 @@
 
     <script src = "changeSections.js"></script>
     <script src="likes.js"></script>
-
-    <!--   changeSlides.js ----- ja ima vo body----- comments.js----Treba da ja dorabotam -->
+    <script src="comments.js"></script>
+    <script src = "changeSlides.js"></script> 
     
-    <!--<script src = "changeSlides.js"></script>-->
-    <!--<script src="comments.js"></script>-->
     
    
 </head>
@@ -35,17 +33,16 @@
             <div class="logo"> <h3>menu</h3></div>
             <ul class="nav-links">
                 <li><a onclick="currentSection(1)" class="activee">Home</a></li>
-                <li><a onclick="currentSection(2)" >About Me</a></li>
+                <li><a onclick="currentSection(2), currentSlide(1)" >About Me</a></li>
                 <li><a onclick="currentSection(3)">My Gallery</a></li>
                 <li class="dropdown">
                     <a class="dropbutton"  onclick="currentSection(4)"> My Favourite Things    </a>   
                
                     <div class="dropdown-content">
-                        <a href="#movie">Movies</a>
-                        <a href="#show">TV Shows</a>
-                        <a href="#book">Books</a>
-                        <a href="#music">Music</a>
-                        <a href="#dish">Dishes</a>
+                        <a href="#movie" onclick="currentSection(4)">Movies</a>
+                        <a href="#show" onclick="currentSection(4)">TV Shows</a>
+                        <a href="#book" onclick="currentSection(4)">Books</a>
+                        <a href="#music" onclick="currentSection(4)">Music</a>
                     </div>
                 </li>
                 <li><a onclick="currentSection(5)" >My Blog</a></li>
@@ -77,13 +74,13 @@
 
 
     </div>   
-    <div class="mySections row1" id="aboutme" onload="showSlides(1)"><h2>About Me</h2>
+    <div class="mySections row1" id="aboutme" onload="showSlides(0)"><h2>About Me</h2>
      
         
             <p class="column1" id="homee">Hello to whoever visiting this page! My name is Mihaela, I'm 21 and I live in Skopje, Macedonia. I'm in my third year of studies towards a bachelor's degree in Telecommunication and Information engineering at FEEIT Skopje.
                 <br><br>I would describe myself as a very enthusiastic student and I’ve been that way since I was little. I have an insatiable thirst for knowledge! Ok, maybe I was (am) just a regular nerd… I have tendencies of analysing every single detail at everything. All in all, I am pretty much an organized person. Oh wait… I see… I didn’t tell you this was my “bragging section”. I am not even sorry! For funnier and more enjoyable stuff click <a href="#favthings"> here</a>.
                 <br><br>Anyway, in my spare time I enjoy reading books, watching movies and listening to good music. Although the “music part” is not just in my spare time. I also love working out. I like to go jogging occasionally, that’s not my favourite type of exercise though. But I really enjoy hiking and going for long walks.
-            </p>
+            </p1>
         
         <div class="slideshow-container column1">
 
@@ -165,126 +162,153 @@
     
     <div class="mySections" id="gallery"><h2>My Gallery</h2> 
         <div class="row">
+
             <div class="column" style="background-color:#aaa;">
+
                 <div class="card">
                     <img src="gallery9.jpg" alt="Avatar" style="width:100%">
                     <div class="container">
-                        <p><button onclick="clickCounter()" type="button">Like</button></p>
-                        <div id="result"></div> 
+                        <button class="like, btn" onclick="clickCounter(1)" type="button"   style="width:70px;">Like</button>
+                        <div class="result" style="color: silver; font: sans-serif; font-size: large;"></div> 
 
                       <p><div class="comment">
-                           <form onsubmit="return false"><textarea id="title1" type="text "rows="2" cols="20" onkeyup="Allow()" placeholder="write a comment......"></textarea>
-                           <input type="submit" value="Post" onclick="insert()" style="width:20px;" /></form>
+                           <form onsubmit="return false"><textarea class = "title" id="title1" type="text "rows="2" cols="20" onkeyup="Allow()" placeholder="write a comment......"></textarea>
+                           <input class="btn" type="submit" value="Post" onclick="insert(1)" style="width:70px;" /></form>
                         </div>
-                          <div id="display1" ></div>
+                          <div class="display" id="display1" style="color: silver; font: sans-serif; font-size: large;"></div>
                       </p> 
                     </div>
                   </div>
+
+
                   <div class="card">
                     <img src="gallery6.jpg" alt="Avatar" style="width:100%">
                     <div class="container">
-                        <p><button onclick="clickCounter()" type="button">Like</button></p>
-                        <div id="result"></div> 
-                      <p><div class="comment">
-                        <textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="write a comment......"></textarea>
-                        <input type="submit" value="Post" onclick="insert()" style="width:20px;" /></form>
-                        </div>
-                        <div id="display"></div></p>
+                        <button class="like, btn" onclick="clickCounter(2)" type="button" style="width:70px;">Like</button>
+                        <div class="result" style="color: silver; font: sans-serif; font-size: large;"></div>
 
+                      <p><div class="comment">
+                        <textarea class="title" id = "title2"type="text "rows="2" cols="20" onkeyup="Allow()" placeholder="write a comment......"></textarea>
+                        <input type="submit" class="btn" value="Post" onclick="insert(2)" style="width:70px;" /></form>
+                        </div>
+                        <div class="display" id="display2" style="color: silver; font: sans-serif; font-size: large;"></div></p>
                     </div>
                   </div>
+
+
                   <div class="card">
                     <img src="gallery3.jpg" alt="Avatar" style="width:100%">
                     <div class="container">
-                        <p><button onclick="clickCounter()" type="button">Like</button></p>
-                        <div id="result"></div> 
+                        <button class="like, btn" onclick="clickCounter(3)" type="button" style="width:70px;">Like</button>
+                        <div class="result" style="color: silver; font: sans-serif; font-size: large;"></div> 
+
                       <p><p><div class="comment">
-                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
-                        <br><input type="submit" value="Post" onclick="insert()" style="width:50px;"  /></form>
+                        <textarea id="title3" class="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
+                        <br><input type="submit" class="btn" value="Post" onclick="insert(3)" style="width:70px;"  /></form>
                         </div>
-                        <div id="display" onload="clearAndShow()"></div>
+                        <div id="display3" class="display" onload="clearAndShow()" style="color: silver; font: sans-serif; font-size: large;"></div>
                       </p></p> 
                     </div>
                   </div>
             </div>
+
+
             <div class="column" style="background-color:#bbb;">
+
                 <div class="card">
                     <img src="gallery8.jpg" alt="Avatar" style="width:100%">
                     <div class="container">
-                        <p><button onclick="clickCounter()" type="button">Like</button></p>
-                        <div id="result"></div> 
+                        <button class="like, btn" onclick="clickCounter(4)" type="button" style="width:70px;">Like</button>
+                        <div class="result" style="color: silver; font: sans-serif; font-size: large;"></div> 
+
                       <p><p><div class="comment">
-                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
-                        <br><input type="submit" value="Post" onclick="insert()" style="width:50px;"  /></form>
+                        <textarea id="title4" class="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
+                        <br><input type="submit" class="btn" value="Post" onclick="insert(4)"style="width:70px;"  /></form>
                         </div>
-                        <div id="display" onload="clearAndShow()"></div>
+                        <div id="display4" class="display" onload="clearAndShow()" style="color: silver; font: sans-serif; font-size: large;"></div>
                       </p></p> 
                     </div>
                   </div>
+
+
                   <div class="card">
                     <img src="gallery5.jpg" alt="Avatar" style="width:100%">
                     <div class="container">
-                        <p><button onclick="clickCounter()" type="button">Like</button></p>
-                        <div id="result"></div>
+                        <button class="like, btn" onclick="clickCounter(5)" type="button" style="width:70px;">Like</button>
+                        <div class="result" style="color: silver; font: sans-serif; font-size: large;"></div>
+
                       <p><p><div class="comment">
-                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
-                        <br><input type="submit" value="Post" onclick="insert()" style="width:50px;"  /></form>
+                        <textarea id="title5"class="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
+                        <br><input type="submit" class="btn" value="Post" onclick="insert(5)" style="width:70px;"  /></form>
                         </div>
-                        <div id="display" onload="clearAndShow()"></div>
+                        <div id="display5" class="display" onload="clearAndShow()" style="color: silver; font: sans-serif; font-size: large;"></div>
                       </p></p> 
                     </div>
                   </div>
+
+
                   <div class="card">
                     <img src="gallery2.jpg" alt="Avatar" style="width:100%">
                     <div class="container">
-                        <p><button onclick="clickCounter()" type="button">Like</button></p>
-                        <div id="result"></div>
+                        <button class="like, btn" onclick="clickCounter(6)" type="button" style="width:70px;">Like</button>
+                        <div class="result" style="color: silver; font: sans-serif; font-size: large;"></div>
+
                       <p><p><div class="comment">
-                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
-                        <br><input type="submit" value="Post" onclick="insert()" style="width:50px;"  /></form>
+                        <textarea id="title6" class="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
+                        <br><input type="submit" class="btn" value="Post" onclick="insert(6)" style="width:70px;"  /></form>
                         </div>
-                        <div id="display" onload="clearAndShow()"></div>
+                        <div id="display6" class="display" onload="clearAndShow()" style="color: silver; font: sans-serif; font-size: large;"></div>
                       </p></p> 
                     </div>
                   </div>
             </div>
+
+
             <div class="column" style="background-color:#ccc;">
+
                  <div class="card">
                     <img src="gallery7.jpg" alt="Avatar" style="width:100%">
                     <div class="container">
-                        <p><button onclick="clickCounter()" type="button">Like</button></p>
-                        <div id="result"></div> 
+                        <button class="like, btn" onclick="clickCounter(7)" type="button" style="width:70px;">Like</button>
+                        <div class="result" style="color: silver; font: sans-serif; font-size: large;"></div> 
+
                       <p><p><div class="comment">
-                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
-                        <br><input type="submit" value="Post" onclick="insert()" style="width:50px;"  /></form>
+                        <textarea id="title7" class="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
+                        <br><input class="btn" type="submit" value="Post" onclick="insert(7)" style="width:70px;"  /></form>
                         </div>
-                        <div id="display" onload="clearAndShow()"></div>
+                        <div id="display7" class="display" onload="clearAndShow()" style="color: silver; font: sans-serif; font-size: large;"></div>
                       </p></p> 
                     </div>
                   </div>
+
+
                   <div class="card">
                     <img src="gallery4.jpg" alt="Avatar" style="width:100%">
                     <div class="container">
-                        <p><button onclick="clickCounter()" type="button">Like</button></p>
-                        <div id="result"></div> 
+                        <button class="like, btn" onclick="clickCounter(8)" type="button" style="width:70px;">Like</button>
+                        <div class="result" style="color: silver; font: sans-serif; font-size: large;"></div> 
+
                       <p><p><div class="comment">
-                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
-                        <br><input type="submit" value="Post" onclick="insert()" style="width:50px;"  /></form>
+                        <textarea id="title8" class="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
+                        <br><input class="btn" type="submit" value="Post" onclick="insert(8)" style="width:70px;"  /></form>
                         </div>
-                        <div id="display" onload="clearAndShow()"></div>
+                        <div id="display8" class="display" onload="clearAndShow()" style="color: silver; font: sans-serif; font-size: large;"></div>
                       </p></p> 
                     </div>
                   </div>
+
+
                   <div class="card">
                     <img src="gallery1.jpg" alt="Avatar" style="width:100%">
                     <div class="container">
-                        <p><button onclick="clickCounter()" type="button">Like</button></p>
-                        <div id="result"></div> 
+                        <button class="like, btn" onclick="clickCounter(9)" type="button" style="width:70px;">Like</button>
+                        <div class="result" style="color: silver; font: sans-serif; font-size: large;"></div> 
                       <p><p><div class="comment">
-                        <textarea id="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
-                        <br><input type="submit" value="Post" onclick="insert()" style="width:50px;"  /></form>
+
+                        <textarea id="title9" class="title" type="text "rows="2" cols="20" onclick="Allow()" placeholder="write a comment......"></textarea>
+                        <br><input class="btn" type="submit" value="Post" onclick="insert(9)" style="width:70px;"  /></form>
                         </div>
-                        <div id="display" onload="clearAndShow()"></div>
+                        <div id="display9" class="display" onload="clearAndShow()" style="color: silver; font: sans-serif; font-size: large;" ></div>
                       </p></p> 
                     </div>
                   </div>
@@ -305,27 +329,30 @@
 
     <div class="mySections" id="favthings"><h2>My Favourite Things</h2>
         
-        <div id="movie"><h4>Movies</h4>
+        <div id="movie"><h4>Movies</h4><br>
             <p>Who doesn’t love a good movie on a rainy day? Or binge-worthy TV show when you have a ton of work to do? I know I do.<br>Here are some suggestions for you to rely on when you can’t decide what to watch . </p>
+            <br>
             <div class="row" style="background-color: rgba(73, 98, 122, 0.664)">
                 <div class="column"><figure><img src="movie1.jpg" height="200dp" /><br>Good Will Hunting (1997)</figure></div> 
                 <div class="column"><figure><img src="movie2.jpg" height="200dp"/><br> The Shawshank Redemption (1994)</figure></div>
                 <div class="column"><figure><img src="movie3.jpg" height="200dp" /><br> Leon The Professional (1994)</figure></div>
             </div>
         </div>
-        <div id="show"><h4>TV Shows</h4>
+        <div id="show"><h4>TV Shows</h4><br>
             <p></p>
+            <br>
             <div class="row" style="background-color:  rgba(73, 98, 122, 0.664);">
-                <div class="column"><figure><img src="tvshow1.jpg" height="200dp"/><br>Mad Man (2007)</figure></div>   
-                <div class="column"><figure><img src="tvshow2.jpg" height="200dp" /><br>Gilmore Girls (2000)</figure></div>   
+                <div class="column"><figure><img src="tvshow2.jpg" height="200dp"/><br>Gilmore Girls (2000)</figure></div>   
+                <div class="column"><figure><img src="tvshow1.jpg" height="200dp" /><br>Mad Man (2007)</figure></div>   
                 <div class="column"><figure><img src="tvshow3.jpg" height="200dp" /><br>Breaking Bad (2008)</figure></div>
             </div>
         </div>
-        <div id="book"><h4>Books</h4>
+        <div id="book"><h4>Books</h4><br>
             <p>I LOOOOVE reading books. Over the years it became like a regular habit of mine. A day doesn’t go by without going through at least 9-10 pages. On a good day there are many, many more. 
                 I’ve read some really good books, and some really bad ones too which I successfully survived till the last page. But I never give up on them. Slowly but surely. Maybe next time I would know what not to pick.  
                 <br>*FUN FACT* Just now, I found out that a lot of people read the last page first! Why would someone spoil such an adventure for themselves?!  Okay, maybe it allows you to look for deeper meaning while reading… I don’t know, I think one can multitask.
             </p>
+            <br>
             <div class="row" style="background-color: rgba(73, 98, 122, 0.664);">
                 <div class="column"><figure><img src="book1.jpg" height="200dp" /><br><em> "Memoirs of a Geisha"</em><br> Arthur Golden</figure></div> 
                 <div class="column"><figure><img src="book2.jpg" height="200dp" /><br> <em>"The Girl Who Kicked The Hornets' Nest"<br>Millennium</em> (novel series)<br>Stieg Larson</figure></div>  
@@ -333,8 +360,9 @@
             </div>
         </div>
         
-        <div id="music" ><h4>Music</h4>
+        <div id="music" ><h4>Music</h4><br>
             <p >In my playlist you can find anything. Everything of good quality of course. <br>Because I can’t make my mind up about what kind of music I like best at this moment, I’m going to put it on shuffle and see what comes out of it. </p>
+            <br>
             <div class="row" style="background-color: rgba(73, 98, 122, 0.664);">
                 <div class="column"><figure><img src="artists1.jpg" height="200dp"/><br>Dire Straits</figure></div>
                 <div class="column"><figure><img src="artists2.jpg" height="200dp"/><br>Foltin Band</figure></div> 
@@ -364,49 +392,72 @@
          <div  class="container1 right">
           <div  class="content">
            <h2 id="displayBlogHeader">New article goes here</h2>
-           <p id="displayBlog"> ...</p>
+           <em><p id="displayBlogDate" style="font-size: small;"> Date </p></em><br>
+           <p id="displayBlog"> Content</p>
           </div>
         </div></div>
         <div class="container1 left">
           <div class="content">
-            <h2>Date/Title</h2>
+            <h2>Title</h2>
+            <em><p style="font-size: small;" id="d1">Date</p></em><br>
             <p>text</p>
           </div>
         </div>
         <div class="container1 right">
           <div class="content">
-            <h2>Date/Title</h2>
+            <h2>Title</h2>
+            <em><p style="font-size: small;" id="d2">Date</p></em><br>
             <p>text</p>
           </div>
         </div>
         <div class="container1 left">
           <div class="content">
-            <h2>Date/Title</h2>
+            <h2>Title</h2>
+            <em><p style="font-size: small;" id="d3">Date</p></em><br>
             <p>text</p>
           </div>
         </div>
         <div class="container1 right">
           <div class="content">
-            <h2>Date/Title</h2>
+            <h2>Title</h2>
+            <em><p style="font-size: small;" id="d4">Date</p></em><br>
             <p>text</p>
           </div>
         </div>
         <div class="container1 left">
           <div class="content">
-            <h2>Date/Title</h2>
+            <h2>Title</h2>
+            <em><p style="font-size: small;" id="d5">Date</p></em><br>
             <p>text</p>
           </div>
         </div>
         <div class="container1 right">
           <div class="content">
-            <h2>Date/Title</h2>
+            <h2>Title</h2>
+            <em><p style="font-size: small;" id ="d6">Date</p></em><br>
             <p>text</p>
           </div>
         </div>
       </div>
     </div>
     
+<script>
+  var dates = [];
+  dates[0] = new Date(2020, 11, 6).toDateString();
+  dates[1] = new Date(2020, 10, 24).toDateString();
+  dates[2] = new Date(2020, 10, 18).toDateString();
+  dates[3] = new Date(2020, 9, 28).toDateString();
+  dates[4] = new Date(2020, 9, 14).toDateString();
+  dates[5] = new Date(2020, 9, 6).toDateString();
 
+  document.getElementById("d1").innerHTML = dates[0];
+  document.getElementById("d2").innerHTML = dates[1];
+  document.getElementById("d3").innerHTML = dates[2];
+  document.getElementById("d4").innerHTML = dates[3];
+  document.getElementById("d5").innerHTML = dates[4];
+  document.getElementById("d6").innerHTML = dates[5];
+
+</script>
 
 
 
@@ -535,42 +586,18 @@
 
 </div><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 <footer>
-  <p><br> <img src="logo.jpg" width="45dp" height="40dp" /><br><em>Mihaela Petrovska</em>  <br> <em> October 2020 </em> </p> 
+  <p><br> <img src="logo.jpg" width="45dp" height="40dp" /><br><em>Mihaela Petrovska</em>  <br> <em id="datee"> December 2020 </em> </p> 
 </footer>
+<script>
+  var datum = new Date();
+  document.getElementById("datee").innerHTML = datum.toDateString() +"<br/>"+ datum.toLocaleTimeString();
+</script>
+
+
+  
 
 
 
-   <!----------------------------
-    skripta za slideshow
-    -------------------------- -->
-    <script type="text/javascript">
-      var slideIndex = 1;
-      showSlides(slideIndex);
-  
-      function plusSlides(n) {
-         showSlides(slideIndex += n);
-      }
-  
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-  
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-      }
-    </script>
 
 
 <!----------------------
@@ -596,43 +623,20 @@
   </script>
 
 
-  <!----------------------------
-       skripta za komentari
-   ---------------------------- -->
-    <script type="text/javascript">
-      var titles = [];
-      var titleInput = document.getElementById("title1");
-      var messageBox = document.getElementById("display1");
-      /*function Allow()
-      {    MOZEBI KJE KORISTI ZA PONATAKA
-        if (!user.title1.value.match(/[a-zA-Z]$/) && user.title1.value !="")
-        {
-          user.title1.value="";
-          alert("Please Enter only alphabets");
-        }
-        window.location.reload()
-      }*/
-      function insert () {
-      titles.push(titleInput.value);
-      clearAndShow();
-      }
-      function clearAndShow ()
-      {
-        titleInput.value = "";
-        messageBox.innerHTML = "";
-        messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
-      }
-      </script>
+  
+    
 <!-------------------------
     Skripta za blog
   -------------------------->
 
   <script>
+      var datum = new Date();
       var postt=[];
       var posttHeader=[];
       var InputHeader=document.getElementById("blogHeaderInput");
       var Input = document.getElementById("blogInput");
       var displayBox = document.getElementById("displayBlog");
+      var displayBoxDate = document.getElementById("displayBlogDate");
       var displayBoxHeader=document.getElementById("displayBlogHeader")
       
       function insertBlog () {
@@ -644,11 +648,16 @@
       {
         Input.value="";
         InputHeader.value="";
+        displayBoxDate.innerHTML="";
         displayBoxHeader.innerHTML="";
         displayBoxHeader.innerHTML += " " + posttHeader.join("<br/> ") + "<br/>";
+        
+        displayBoxDate.innerHTML += " " + datum.toDateString() + "<br/>";
         displayBox.innerHTML = "";
         displayBox.innerHTML += " " + postt.join("<br/> ") + "<br/>";
       }
+
+      
    </script>
 
 
